@@ -1,0 +1,12 @@
+﻿namespace XState.State
+{
+    public interface StateMachine<TContext, TState, TEvent, TEmitted>
+    {
+        // Define StateMachine properties here
+
+    }
+    public class StateMachine<TContext, TStateSchema, TEvent, TTypestate, TServiceMap, TTypesMeta>
+    {
+        // Define StateMachine class
+    }
+}
