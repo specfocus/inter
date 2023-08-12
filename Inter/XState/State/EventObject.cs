@@ -1,5 +1,6 @@
 ﻿namespace XState.State
 {
+    // Use the interface Event instead of the class EventObject
     public class EventObject : Event
     {
         public EventObject(string type) => Type = type;
