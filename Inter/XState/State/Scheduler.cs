@@ -6,11 +6,11 @@
     public class Scheduler
     {
         private bool processingEvent = false;
-        private List<System.Action> queue = new();
+        private readonly List<System.Action> queue = new();
         private bool initialized = false;
 
         // deferred feature
-        private SchedulerOptions options;
+        private readonly SchedulerOptions options;
 
         public Scheduler(SchedulerOptions? options = null)
         {

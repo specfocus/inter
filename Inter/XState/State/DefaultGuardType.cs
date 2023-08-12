@@ -1,15 +1,25 @@
-﻿using XState.Extensions;
-
-namespace XState.State
+﻿namespace XState.State
 {
-    internal class DefaultGuardType
+    using XState.Extensions;
+
+    public class DefaultGuardType
     {
-        public DefaultGuardType(string value) { Value = value; }
+        public static implicit operator DefaultGuardType(string value)
+        {
+            return new DefaultGuardType(value);
+        }
 
-        public string Value { get; private set; }
+        public static implicit operator string(DefaultGuardType guard)
+        {
+            return guard.Value;
+        }
+
+        public DefaultGuardType(string value) => Value = value;
+
+        public string Value { get; }
 
 
-        public static DefaultGuardType xstate_guard = new DefaultGuardType("xstate.guard");
+        public static DefaultGuardType xstate_guard = new("xstate.guard");
 
         public override bool Equals(object? obj)
         {

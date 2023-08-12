@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace XState.State
 {
-    public interface SingleOrArray<T> : ICollection<T> where T : class
+    internal class BaseAction
     {
     }
 }

@@ -1,12 +1,5 @@
 namespace XState.State
 {
-
-
-    public interface BaseActionObject
-    {
-        // Define your BaseActionObject properties here
-    }
-
     public class Model<TContext, TEvent, TAction, TModelCreators>
     {
         public TContext InitialContext { get; set; }

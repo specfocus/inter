@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XState.State
+﻿namespace XState.State
 {
-    internal class ConditionPredicate
-    {
-    }
+    /// <summary>
+    /// Represents a condition predicate function.
+    /// </summary>
+    public delegate bool ConditionPredicate<TContext, TEvent>(
+        TContext context,
+        TEvent @event,
+        GuardMeta<TContext, TEvent> meta
+    )
+        where TContext : class
+        where TEvent : Event;
 }

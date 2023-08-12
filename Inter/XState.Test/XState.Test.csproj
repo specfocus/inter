@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\XState\XState.csproj" />
+  </ItemGroup>
+
 </Project>

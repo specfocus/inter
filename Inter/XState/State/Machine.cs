@@ -1,71 +1,35 @@
-using System;
-using System.Collections.Generic;
-
 namespace XState.State
 {
-    public interface EventObject { /* Define EventObject interface */ }
-    public interface BaseActionObject { /* Define BaseActionObject interface */ }
-    public interface DefaultContext { /* Define DefaultContext interface */ }
-    public interface StateSchema { /* Define StateSchema interface */ }
-    public interface ServiceMap { /* Define ServiceMap interface */ }
-    public interface TypegenConstraint { /* Define TypegenConstraint interface */ }
-
-    public interface Typestate<TContext>
+    public static class Machine
     {
-        /* Define Typestate interface */
-    }
-
-    public interface MachineConfig<TContext, TStateSchema, TEvent, TServiceMap, TTypesMeta>
-    {
-        /* Define MachineConfig interface */
-    }
-
-    public class IS_PRODUCTION
-    {
-        /* Define IS_PRODUCTION class */
-    }
-
-    public class StateNode<TContext, TStateSchema, TEvent, TTypestate, TServiceMap, TTypesMeta>
-    {
-        public StateNode(
-            MachineConfig<TContext, TStateSchema, TEvent, BaseActionObject, TServiceMap, TTypesMeta> config,
-            object options, // Update with correct type for options
-            TContext initialContext
-        )
+        public static StateMachine<TContext, TEvent, TTypestate, TServiceMap, TTypesMeta> CreateMachine<TContext, TEvent, TTypestate, TServiceMap, TTypesMeta>(
+        MachineConfig<TContext, object, TEvent, BaseActionObject, TServiceMap, TTypesMeta> config,
+        InternalMachineOptions<TContext, TEvent, ResolveTypegenMeta<TTypesMeta, TEvent, BaseActionObject, TServiceMap>> options = null
+    )
         {
-            /* Implement StateNode constructor */
-        }
-    }
-
-    public class StateMachine<TContext, TStateSchema, TEvent, TTypestate, TServiceMap, TTypesMeta>
-    {
-        /* Define StateMachine class */
-    }
-
-    public static class StateMachineExtensions
-    {
-        public static StateMachine<TContext, TStateSchema, TEvent, TTypestate, TServiceMap, TTypesMeta>
-            CreateMachine<TContext, TStateSchema, TEvent, TTypestate, TServiceMap, TTypesMeta>(
-            MachineConfig<TContext, TStateSchema, TEvent, BaseActionObject, TServiceMap, TTypesMeta> config,
-            object options // Update with correct type for options
-        )
-        {
-            if (!IS_PRODUCTION && !config.PredictableActionArguments && !Warned)
+            if (!Environment.IS_PRODUCTION && !config.PredictableActionArguments && !warned)
             {
-                Warned = true;
-                Console.WriteLine(
-                    "It is highly recommended to set 'predictableActionArguments' to 'true' when using 'createMachine'. " +
-                    "https://xstate.js.org/docs/guides/actions.html"
-                );
+                warned = true;
+                Console.WriteLine("It is highly recommended to set 'predictableActionArguments' to 'true' when using 'createMachine'. https://xstate.js.org/docs/guides/actions.html");
             }
 
-            return new StateNode<TContext, TStateSchema, TEvent, TTypestate, TServiceMap, TTypesMeta>(
-                config,
-                options,
-                default // Update with appropriate initial context
-            );
+            return new StateNode<TContext, TEvent, TTypestate, TServiceMap, TTypesMeta>(config, options);
         }
 
-        private static bool Warned = false;
+        public static StateMachine<TContext, TEvent, TTypestate, TServiceMap, TTypesMeta> CreateMachine<TContext, TEvent, TTypestate, TServiceMap, TTypesMeta>(
+            MachineConfig<TContext, object, TEvent, BaseActionObject, TServiceMap, TTypesMeta> config,
+            MachineOptions<TContext, TEvent, BaseActionObject, TServiceMap, TTypesMeta> options = null
+        )
+        {
+            if (!Environment.IS_PRODUCTION && !config.PredictableActionArguments && !warned)
+            {
+                warned = true;
+                Console.WriteLine("It is highly recommended to set 'predictableActionArguments' to 'true' when using 'createMachine'. https://xstate.js.org/docs/guides/actions.html");
+            }
+
+            return new StateNode<TContext, TEvent, TTypestate, TServiceMap, TTypesMeta>(config, options);
+        }
+
+        private static bool warned = false;
     }
 }

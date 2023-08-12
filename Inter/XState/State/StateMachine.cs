@@ -9,4 +9,9 @@
     {
         // Define StateMachine class
     }
+
+    public class StateMachine<TContext, TStateSchema, TEvent, TTypestate, TServiceMap, TTypesMeta>
+    {
+        /* Define StateMachine class */
+    }
 }

@@ -1,4 +1,6 @@
 ﻿namespace XState.State
 {
-    public interface ServiceMap { /* Define ServiceMap interface */ }
+    public interface IServiceMap : IDictionary<string, ServiceData> { }
+
+    public class ServiceMap : Dictionary<string, ServiceData>, IServiceMap { }
 }
