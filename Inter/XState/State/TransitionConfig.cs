@@ -1,6 +1,4 @@
-﻿using XState.State.Actions;
-
-namespace XState.State
+﻿namespace XState.State
 {
     /// <summary>
     /// Configuration for a transition between states.
@@ -18,7 +16,7 @@ namespace XState.State
         /// <summary>
         /// The actions to be executed when this transition is taken.
         /// </summary>
-        BaseActions<TContext, TExpressionEvent, TEvent, BaseActionObject> Actions { get; set; }
+        BaseActions<TContext, TExpressionEvent, TEvent, Actions.BaseActionObject> Actions { get; set; }
 
         /// <summary>
         /// The state value in which the transition is defined to be taken.

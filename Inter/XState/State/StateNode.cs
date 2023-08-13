@@ -84,7 +84,7 @@ namespace XState.State
     public class StateNode<TContext, TStateSchema, TEvent, TTypestate, TServiceMap, TResolvedTypesMeta>
         where TContext : class
         where TStateSchema : IStateSchema<TContext>
-        where TEvent : EventObject
+        where TEvent : Event
         where TTypestate : Typestate<TContext>
         where TServiceMap : ServiceMap
     {

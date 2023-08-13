@@ -11,7 +11,7 @@ namespace XState.State
 
         public TContext Context { get; set; }
 
-        public HistoryValue HistoryValue { get; set; }
+        public IHistoryValue HistoryValue { get; set; }
 
         public State<TContext, TEvent, TStateSchema, TTypestate, TResolvedTypesMeta> History { get; set; }
 
