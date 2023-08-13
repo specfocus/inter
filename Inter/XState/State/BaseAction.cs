@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XState.State
+﻿namespace XState.State
 {
-    internal class BaseAction
+    public class BaseAction : BaseActionObject
     {
+        public BaseAction(string type) : base(type)
+        { 
+        }
     }
 }

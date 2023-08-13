@@ -1,4 +1,6 @@
-﻿namespace XState.State
+﻿using XState.State.Actions;
+
+namespace XState.State
 {
     public interface ResolveTypegenMeta<TTypesMeta, TEvent, TAction, TServiceMap>
         where TTypesMeta : TypegenConstraint
@@ -8,19 +10,19 @@
     {
 
         /*
-         '@@xstate/typegen': TTypesMeta['@@xstate/typegen'];
+         "@@xstate/typegen": TTypesMeta["@@xstate/typegen"];
   resolved: {
     enabled: TTypesMeta & {
       indexedActions: IndexByType<TAction>;
       indexedEvents: MergeWithInternalEvents<
         IndexByType<
-          | (string extends TEvent['type'] ? never : TEvent)
+          | (string extends TEvent["type"] ? never : TEvent)
           | GenerateServiceEvents<
               TServiceMap,
-              Prop<TTypesMeta, 'invokeSrcNameMap'>
+              Prop<TTypesMeta, "invokeSrcNameMap">
             >
         >,
-        Prop<TTypesMeta, 'internalEvents'>
+        Prop<TTypesMeta, "internalEvents">
       >;
     };
         */
@@ -36,14 +38,14 @@
         };
         invokeSrcNameMap: Record<
           string,
-          '__XSTATE_ALLOW_ANY_INVOKE_DATA_HACK__'
+          "__XSTATE_ALLOW_ANY_INVOKE_DATA_HACK__"
         >;
       };
   }[IsNever<TTypesMeta> extends true
-    ? 'disabled'
+    ? "disabled"
     : TTypesMeta extends TypegenEnabled
-    ? 'enabled'
-    : 'disabled'];
+    ? "enabled"
+    : "disabled"];
         */
         object Disabled { get; }
     }

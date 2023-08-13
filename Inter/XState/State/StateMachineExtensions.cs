@@ -1,4 +1,6 @@
-﻿namespace XState.State
+﻿using XState.State.Actions;
+
+namespace XState.State
 {
     public static class StateMachineExtensions
     {
@@ -12,7 +14,7 @@
             {
                 Warned = true;
                 Console.WriteLine(
-                    "It is highly recommended to set 'predictableActionArguments' to 'true' when using 'createMachine'. " +
+                    "It is highly recommended to set "predictableActionArguments" to "true" when using "createMachine". " +
                     "https://xstate.js.org/docs/guides/actions.html"
                 );
             }

@@ -78,7 +78,7 @@
                 return errorMessageName;
             }
 
-            return $"'{errorMessageName}'";
+            return $""{errorMessageName}"";
         }
 
         public static IDictionary<string, string> ToStringValueDictionary(this object obj)
@@ -101,7 +101,7 @@
                 result = result.Where(i => Reflection.AreAssignable(typeof(TValue), i.Value?.GetType()));
             }
 
-            return result.ToDictionary(i => i.Key.Replace('_', '-'), i => (TValue)i.Value);
+            return result.ToDictionary(i => i.Key.Replace("_", "-"), i => (TValue)i.Value);
         }
     }
 }

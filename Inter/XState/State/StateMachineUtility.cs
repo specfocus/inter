@@ -1,11 +1,13 @@
+using XState.State.Actions;
+
 namespace XState.State
 {
 
     public static class StateMachineUtility
     {
         public const string NULL_EVENT = "";
-        public const char STATE_IDENTIFIER = '#';
-        public const char WILDCARD = '*';
+        public const char STATE_IDENTIFIER = "#";
+        public const char WILDCARD = "*";
 
         public static readonly Dictionary<string, object> EMPTY_OBJECT = new Dictionary<string, object>();
 
@@ -36,12 +38,12 @@ namespace XState.State
                     (transition.Target is string || transition.Target is StateNode_<TContext, TEvent>)
                 );
 
-            string eventText = @event == NULL_EVENT ? "the transient event" : $"event '{@event}'";
+            string eventText = @event == NULL_EVENT ? "the transient event" : $"event "{@event}"";
 
             if (hasNonLastUnguardedTarget)
             {
                 Console.WriteLine(
-                    $"One or more transitions for {eventText} on state '{stateNode.Id}' are unreachable. " +
+                    $"One or more transitions for {eventText} on state "{stateNode.Id}" are unreachable. " +
                     "Make sure that the default transition is the last one defined."
                 );
             }

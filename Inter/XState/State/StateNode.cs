@@ -17,7 +17,7 @@ namespace XState.State
         // The unique ID of the state node.
         string Id { get; }
 
-        // The machine's own version.
+        // The machine"s own version.
         string Version { get; }
 
         // The type of this state node.
@@ -97,7 +97,7 @@ namespace XState.State
         // The unique ID of the state node.
         public string Id { get; set; }
 
-        // The machine's own version.
+        // The machine"s own version.
         public string Version { get; set; }
 
         // The type of this state node.

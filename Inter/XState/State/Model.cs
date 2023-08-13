@@ -1,3 +1,5 @@
+using XState.State.Actions;
+
 namespace XState.State
 {
     public class Model<TContext, TEvent, TAction, TModelCreators>

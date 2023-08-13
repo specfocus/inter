@@ -34,7 +34,7 @@ namespace XState.State
         SingleOrArray<InvokeConfig<TContext, TEvent> | AnyStateMachine> Invoke { get; set; }
 
         // Mapping of event types to transitions
-        TransitionsConfig<TContext, TEvent> On { get; set; }
+        TransitionsConfig<TContext, TEvent, TEvent> On { get; set; }
 
         // Actions to execute on entering the state node
         Actions<TContext, TEvent> OnEntry { get; set; }

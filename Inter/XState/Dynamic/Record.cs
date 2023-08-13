@@ -62,8 +62,8 @@
             //check the base for the property
             var found = base.TrySetMember(binder, value);
 
-            //if it wasn't found then the user must have wanted a new key
-            //we'll expect implicit casting here, and an exception will be raised
+            //if it wasn"t found then the user must have wanted a new key
+            //we"ll expect implicit casting here, and an exception will be raised
             //if it cannot explicitly cast
             if (!found)
             {

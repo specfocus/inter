@@ -10,7 +10,7 @@ namespace XState.State
             if (!Environment.IS_PRODUCTION && !config.PredictableActionArguments && !warned)
             {
                 warned = true;
-                Console.WriteLine("It is highly recommended to set 'predictableActionArguments' to 'true' when using 'createMachine'. https://xstate.js.org/docs/guides/actions.html");
+                Console.WriteLine("It is highly recommended to set "predictableActionArguments" to "true" when using "createMachine". https://xstate.js.org/docs/guides/actions.html");
             }
 
             return new StateNode<TContext, TEvent, TTypestate, TServiceMap, TTypesMeta>(config, options);
@@ -24,7 +24,7 @@ namespace XState.State
             if (!Environment.IS_PRODUCTION && !config.PredictableActionArguments && !warned)
             {
                 warned = true;
-                Console.WriteLine("It is highly recommended to set 'predictableActionArguments' to 'true' when using 'createMachine'. https://xstate.js.org/docs/guides/actions.html");
+                Console.WriteLine("It is highly recommended to set "predictableActionArguments" to "true" when using "createMachine". https://xstate.js.org/docs/guides/actions.html");
             }
 
             return new StateNode<TContext, TEvent, TTypestate, TServiceMap, TTypesMeta>(config, options);

@@ -3,6 +3,7 @@ namespace XState.State
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using XState.State.Actions;
 
     public class State<TContext, TEvent, TStateSchema, TTypestate, TResolvedTypesMeta>
     {

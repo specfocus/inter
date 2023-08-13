@@ -1,4 +1,6 @@
-﻿namespace XState.State
+﻿using XState.State.Actions;
+
+namespace XState.State
 {
     public interface IMachineConfig<TContext, TStateSchema, TEvent, TAction, TServiceMap, TTypesMeta>
         where TContext : class
@@ -13,7 +15,7 @@
         // The initial context (extended state)
         LowInfer<TContext> Context { get; }
 
-        // The machine's own version
+        // The machine"s own version
         string Version { get; }
 
         // Optional properties specific to MachineConfig
@@ -35,7 +37,7 @@
         // The initial context (extended state)
         public LowInfer<TContext> Context { get; set; }
 
-        // The machine's own version
+        // The machine"s own version
         public string Version { get; set; }
 
         // Optional properties specific to MachineConfig

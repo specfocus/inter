@@ -1,6 +1,5 @@
 ﻿namespace XState.State
 {
-    using System;
     using XState.Dynamic;
 
     public class Guard<TContext, TEvent> : Record

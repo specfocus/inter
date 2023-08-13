@@ -1,4 +1,4 @@
-﻿namespace XState.State
+﻿namespace XState.State.Actions
 {
     /// <summary>
     /// Represents metadata associated with an action.
