@@ -1,4 +1,4 @@
-﻿namespace XState.State
+﻿namespace XState
 {
     using System.Reflection;
 
