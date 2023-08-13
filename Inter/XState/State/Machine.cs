@@ -1,3 +1,5 @@
+using XState.State.Actions;
+
 namespace XState.State
 {
     public static class Machine

@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XState.State
+﻿namespace XState.State
 {
-    internal class InvokeSourceDefinition
+    public class InvokeSourceDefinition : XState.Dynamic.Record
     {
+        public static implicit operator string(InvokeSourceDefinition definition) => definition.Type;
+
+        public static implicit operator InvokeSourceDefinition(string type) => new(type);
+
+        public InvokeSourceDefinition(string type) => Type = type;
+
+        public string Type { get; }
+
+        public override bool Equals(object? obj) => obj is InvokeSourceDefinition definition && Type == definition.Type || obj is string str && Type == str;
+
+        public override int GetHashCode() => Type.GetHashCode();
+
+        public override string ToString() => Type;
     }
 }

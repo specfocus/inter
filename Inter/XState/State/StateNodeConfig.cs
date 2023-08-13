@@ -1,5 +1,6 @@
 ﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 using System;
+using XState.State.Actions;
 
 namespace XState.State
 {

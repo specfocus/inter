@@ -21,12 +21,12 @@ namespace XState.State.Actions
         List<ChooseCondition<TContext, TExpressionEvent, TEvent>> Conds { get; }
     }
 
-    public class ChooseAction<TContext, TExpressionEvent, TEvent> : IChooseAction<TContext, TExpressionEvent, TEvent>
+    public class ChooseAction<TContext, TExpressionEvent, TEvent> : Action<TContext, TExpressionEvent, TEvent>, IChooseAction<TContext, TExpressionEvent, TEvent>
         where TContext : class
         where TExpressionEvent : Event
         where TEvent : Event
     {
-        public ActionType Type => ActionTypes.Choose.Value;
+        public override ActionType Type => ActionTypes.Choose.Value;
 
         public List<ChooseCondition<TContext, TExpressionEvent, TEvent>> Conds { get; } = new();
     }

@@ -3,16 +3,12 @@
     /// <summary>
     /// Represents the full definition of an action, including its type and execution logic.
     /// </summary>
-    public interface IActionObject<TContext, TExpressionEvent, TEvent, TAction>
+    public interface IActionObject<TContext, TExpressionEvent, TEvent, TAction> : IAction<TContext, TExpressionEvent, TEvent>
         where TContext : class
         where TExpressionEvent : Event
         where TEvent : Event
         where TAction : BaseActionObject
     {
-        /// <summary>
-        /// The type of the action.
-        /// </summary>
-        ActionType Type { get; }
 
         /// <summary>
         /// The implementation for executing the action.
@@ -29,16 +25,18 @@
     /// Represents the full definition of an action, including its type and execution logic.
     /// </summary>
     public class ActionObject<TContext, TExpressionEvent, TEvent, TAction>
-        : IActionObject<TContext, TExpressionEvent, TEvent, TAction>
+        : Action<TContext, TExpressionEvent, TEvent>, IActionObject<TContext, TExpressionEvent, TEvent, TAction>
         where TContext : class
         where TExpressionEvent : Event
         where TEvent : Event
         where TAction : BaseActionObject
     {
+        public ActionObject(ActionType type) => Type = type;
+
         /// <summary>
         /// The type of the action.
         /// </summary>
-        public ActionType Type { get; set; }
+        public override ActionType Type { get; }
 
         /// <summary>
         /// The implementation for executing the action.

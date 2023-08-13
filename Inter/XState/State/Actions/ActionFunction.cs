@@ -3,9 +3,9 @@
     /// <summary>
     /// Represents the signature of an action function.
     /// </summary>
-    public delegate void ActionFunction<TContext, TExpressionEvent, TAction, TEvent>(
-        TContext arg,
-        TExpressionEvent ev,
+    public delegate void ActionFunction<TContext, TExpressionEvent, TEvent, TAction>(
+        TContext context,
+        TExpressionEvent @event,
         ActionMeta<TContext, TEvent, TAction> meta
     )
         where TContext : class

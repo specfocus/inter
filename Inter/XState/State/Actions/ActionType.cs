@@ -13,7 +13,7 @@
 
         public override string ToString() => Value;
 
-        public override bool Equals(object obj) => obj is ActionType type && Value == type.Value || obj is string str && Value == str;
+        public override bool Equals(object? obj) => obj is ActionType type && Value == type.Value || obj is string str && Value == str;
 
         public override int GetHashCode() => Value.GetHashCode();
     }

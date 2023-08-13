@@ -8,11 +8,11 @@
     {
     }
 
-    public class LogAction<TContext, TExpressionEvent, TEvent> : ILogAction<TContext, TExpressionEvent, TEvent>
+    public class LogAction<TContext, TExpressionEvent, TEvent> : Action<TContext, TExpressionEvent, TEvent>, ILogAction<TContext, TExpressionEvent, TEvent>
         where TContext : class
         where TExpressionEvent : Event
         where TEvent : Event
     {
-        public ActionType Type => ActionTypes.Log.Value;
+        public override ActionType Type => ActionTypes.Log.Value;
     }
 }

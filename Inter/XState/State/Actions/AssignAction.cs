@@ -13,16 +13,6 @@ namespace XState.State.Actions
         Event<TEvent> Event { get; set; }
     }
 
-    public delegate void ActionFunction<TContext, TExpressionEvent, TAction, TEvent>(
-        TContext context,
-        TExpressionEvent @event,
-        ActionMeta<TContext, TEvent, TAction> meta
-    )
-        where TContext : class
-        where TExpressionEvent : Event
-        where TEvent : Event
-        where TAction : BaseActionObject;
-
     public delegate Partial<TContext> Assigner<TContext, TEvent>(TContext context, TEvent @event, AssignMeta<TContext, TEvent> meta)
         where TContext : class
         where TEvent : Event;
@@ -50,7 +40,7 @@ namespace XState.State.Actions
         PropertyAssigner<TContext, TExpressionEvent>? Assignment { get; }
     }
 
-    public class AssignAction<TContext, TExpressionEvent, TEvent> : IAssignAction<TContext, TExpressionEvent, TEvent>
+    public class AssignAction<TContext, TExpressionEvent, TEvent> : Action<TContext, TExpressionEvent, TEvent>, IAssignAction<TContext, TExpressionEvent, TEvent>
         where TContext : class
         where TExpressionEvent : Event
         where TEvent : Event
@@ -67,7 +57,7 @@ namespace XState.State.Actions
 
         public PropertyAssigner<TContext, TExpressionEvent>? Assignment { get; }
 
-        public ActionType Type => ActionTypes.Assign.Value;
+        public override ActionType Type => ActionTypes.Assign.Value;
 
         public override bool Equals(object? obj) => obj is Assigner<TContext, TExpressionEvent> assigner && Assigner == assigner || obj is PropertyAssigner<TContext, TExpressionEvent> assignment && Assignment == assignment;
 

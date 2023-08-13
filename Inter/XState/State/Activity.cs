@@ -1,24 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using XState.State.Actions;
-
-namespace XState.State
+﻿namespace XState.State
 {
-    public interface Activity<TContext, TEvent> where TContext : class where TEvent : Event
-    {
-        public string Id { get; }
+    using XState.State.Actions;
 
-        public string Type { get; }
+    public interface IActivity<TContext, TEvent>
+        where TContext : class
+        where TEvent : Event
+    {
+        string Id { get; }
+
+        ActionType Type { get; }
     }
 
-    public class ActivityDefinition<TContext, TEvent> : ActionObject<TContext, TEvent, TEvent, BaseActionObject>, Activity<TContext, TEvent>
-        where TContext : class where TEvent : Event
+    public abstract class Activity<TContext, TEvent> : ActionObject<TContext, TEvent, TEvent, BaseActionObject>, IActivity<TContext, TEvent>
+        where TContext : class
+        where TEvent : Event
     {
-        public string Id { get; set; }
+        public static implicit operator string(Activity<TContext, TEvent> activity) => activity.Type;
 
-        public string Type { get; set; }
+        public Activity(ActionType type)
+            : base(type)
+        {
+        }
+
+        public abstract string Id { get; }
+    }
+
+    public class ActivityDefinition<TContext, TEvent> : Activity<TContext, TEvent>
+        where TContext : class
+        where TEvent : Event
+    {
+        public ActivityDefinition(ActionType type, string id)
+            : base(type)
+        {
+            Id = id;
+        }
+
+        public override string Id { get; }
+    }
+
+    public sealed class ActivityMap : Dictionary<string, ActivityDefinition<object, Event>>
+    {
     }
 }

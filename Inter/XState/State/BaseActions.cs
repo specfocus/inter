@@ -1,4 +1,6 @@
-﻿namespace XState.State
+﻿using XState.State.Actions;
+
+namespace XState.State
 {
     public class BaseActions<TContext, TExpressionEvent, TEvent, TAction>
         : SingleOrArray<BaseAction<TContext, TExpressionEvent, TEvent, TAction>>

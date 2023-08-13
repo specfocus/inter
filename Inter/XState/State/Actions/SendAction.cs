@@ -8,11 +8,11 @@
     {
     }
 
-    public class SendAction<TContext, TExpressionEvent, TEvent> : ISendAction<TContext, TExpressionEvent, TEvent>
+    public class SendAction<TContext, TExpressionEvent, TEvent> : Action<TContext, TExpressionEvent, TEvent>, ISendAction<TContext, TExpressionEvent, TEvent>
         where TContext : class
         where TExpressionEvent : Event
         where TEvent : Event
     {
-        public ActionType Type => ActionTypes.Send.Value;
+        public override ActionType Type => ActionTypes.Send.Value;
     }
 }

@@ -1,4 +1,4 @@
-﻿using XState.State;
+﻿using XState.State.Actions;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace XState.State

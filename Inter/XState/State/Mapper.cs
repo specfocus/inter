@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XState.State
+﻿namespace XState.State
 {
-    internal class Mapper
-    {
-    }
+    public delegate TParams Mapper<TContext, TEvent, TParams>(TContext context, TEvent @event)
+        where TContext : class
+        where TEvent : Event
+        where TParams : class, new();
 }

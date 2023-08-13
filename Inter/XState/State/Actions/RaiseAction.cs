@@ -15,12 +15,12 @@
         string? Id { get; set; }
     }
 
-    public class RaiseAction<TContext, TExpressionEvent, TEvent> : IRaiseAction<TContext, TExpressionEvent, TEvent>
+    public class RaiseAction<TContext, TExpressionEvent, TEvent> : Action<TContext, TExpressionEvent, TEvent>, IRaiseAction<TContext, TExpressionEvent, TEvent>
         where TContext : class
         where TExpressionEvent : Event
         where TEvent : Event
     {
-        public ActionType Type => ActionTypes.Raise.Value;
+        public override ActionType Type => ActionTypes.Raise.Value;
 
         public TEvent Event { get; set; }
 

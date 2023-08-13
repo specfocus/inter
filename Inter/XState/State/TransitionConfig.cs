@@ -1,4 +1,6 @@
-﻿namespace XState.State
+﻿using XState.State.Actions;
+
+namespace XState.State
 {
     /// <summary>
     /// Configuration for a transition between states.

@@ -11,13 +11,15 @@ namespace XState.State.Actions
         string SendId { get; }
     }
 
-    public class CancelAction<TContext, TExpressionEvent, TEvent> : ICancelAction<TContext, TExpressionEvent, TEvent>
+    public class CancelAction<TContext, TExpressionEvent, TEvent> : Action<TContext, TExpressionEvent, TEvent>, ICancelAction<TContext, TExpressionEvent, TEvent>
         where TContext : class
         where TExpressionEvent : Event
         where TEvent : Event
     {
-        public ActionType Type => ActionTypes.Cancel.Value;
+        public CancelAction(string sendId) => SendId = sendId;
 
-        public string SendId { get; set; }
+        public override ActionType Type => ActionTypes.Cancel.Value;
+
+        public string SendId { get; }
     }
 }
