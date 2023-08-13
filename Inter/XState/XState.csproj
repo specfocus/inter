@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -20,6 +20,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>WF.md</DependentUpon>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="State\" />
   </ItemGroup>
 
 </Project>

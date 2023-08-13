@@ -78,7 +78,7 @@
                 return errorMessageName;
             }
 
-            return $""{errorMessageName}"";
+            return $""""{errorMessageName}"""";
         }
 
         public static IDictionary<string, string> ToStringValueDictionary(this object obj)
