@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace XState.State
 {
-    internal class Observer
+    public interface Observer<T>
     {
+        void Next(T value);
+        
+        void Error(Exception err);
+
+        void Complete();
     }
 }

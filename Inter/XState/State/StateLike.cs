@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XState.State
+﻿namespace XState.State
 {
-    internal class StateLike
+    public interface StateLike<TContext>
+        where TContext : class
     {
+        StateValue Value { get; set; }
+        TContext Context { get; set; }
+        EventObject Event { get; set; }
+        SCXML.Event<Event> _Event { get; set; }
     }
 }

@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace XState.State
+﻿namespace XState.State
 {
-    internal class Subscribable
+    public interface Subscription
     {
+        void Unsubscribe();
+    }
+
+    public interface InteropObservable<T>
+    {
+        IObservable<T> ToObservable();
+    }
+
+    public interface InteropSubscribable<T>
+    {
+        IDisposable Subscribe(Observer<T> observer);
+    }
+
+    public interface Subscribable<T> : InteropSubscribable<T>
+    {
+        IDisposable Subscribe(Observer<T> observer);
+
+        IDisposable Subscribe(Action<T> next, Action<Exception> error = null, Action complete = null);
     }
 }
