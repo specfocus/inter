@@ -1,7 +1,7 @@
 ﻿using XState.Actions;
 using static XState.SCXML;
 
-namespace XState.State
+namespace XState
 {
     internal static partial class Utils
     {

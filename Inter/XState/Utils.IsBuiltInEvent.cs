@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace XState.State
+namespace XState
 {
     internal static partial class Utils
     {

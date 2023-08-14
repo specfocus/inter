@@ -10,7 +10,7 @@ namespace XState
     public interface StateNodeConfig<TContext, TStateSchema, TEvent, TAction>
         where TContext : class
         where TStateSchema : IStateSchema<TContext>
-        where TEvent : EventObject
+        where TEvent : Event
         where TAction : BaseActionObject
     {
         // The relative key of the state node

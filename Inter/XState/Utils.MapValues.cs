@@ -1,4 +1,4 @@
-namespace XState.State
+namespace XState
 {
     internal static partial class Utils
     {

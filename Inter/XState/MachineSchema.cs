@@ -1,7 +1,8 @@
 ﻿namespace XState
 {
     public interface IMachineSchema<TContext, TEvent, TServiceMap>
-        where TEvent : EventObject
+        where TContext : class
+        where TEvent : Event
         where TServiceMap : ServiceMap
     {
         TContext Context { get; }
@@ -16,7 +17,8 @@
     }
 
     public class MachineSchema<TContext, TEvent, TServiceMap> : IMachineSchema<TContext, TEvent, TServiceMap>
-        where TEvent : EventObject
+        where TContext : class
+        where TEvent : Event
         where TServiceMap : ServiceMap
     {
         public TContext Context { get; set; }

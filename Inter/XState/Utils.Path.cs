@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace XState.State
+namespace XState
 {
     internal static partial class Utils
     {
