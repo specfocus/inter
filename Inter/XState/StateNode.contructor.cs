@@ -188,13 +188,14 @@
             StateNodeConfig<TContext, TStateSchema, TEvent, BaseActionObject> config,
             // The initial extended state
             MachineOptions<TContext, TEvent> options = null,
-            Action<TContext>? contextGetter = null,
+            ContextProvider<TContext> context,
             StateNode<TContext, TStateSchema, TEvent, TTypestate, TServiceMap, TResolvedTypesMeta> parent = null,
             string key = null
         )
         {
             Config = config;
             Parent = parent;
+            _context = context;
         }
 
         public StateNodeConfig<TContext, TStateSchema, TEvent, BaseActionObject> Config { get; }

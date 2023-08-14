@@ -1,9 +1,7 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-using System;
-using XState.Actions;
-
-namespace XState
+﻿namespace XState
 {
+    using XState.Actions;
+
     /// <summary>
     /// Configuration for a state node.
     /// </summary>
