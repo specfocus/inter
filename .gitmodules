@@ -16,3 +16,51 @@
 [submodule "inter-sham-ts"]
 	path = inter-sham-ts
 	url = https://github.com/specfocus/inter-sham-ts.git
+[submodule "resources/RulesEngine"]
+	path = resources/RulesEngine
+	url = https://github.com/microsoft/RulesEngine.git
+[submodule "resources/xstate"]
+	path = resources/xstate
+	url = https://github.com/statelyai/xstate.git
+[submodule "resources/docs"]
+	path = resources/docs
+	url = https://github.com/statelyai/docs.git
+[submodule "resources/xstate-viz"]
+	path = resources/xstate-viz
+	url = https://github.com/statelyai/xstate-viz.git
+[submodule "resources/xstate-tools"]
+	path = resources/xstate-tools
+	url = https://github.com/statelyai/xstate-tools.git
+[submodule "resources/assets"]
+	path = resources/assets
+	url = https://github.com/statelyai/assets.git
+[submodule "resources/workflow-spec"]
+	path = resources/workflow-spec
+	url = https://github.com/statelyai/workflow-spec.git
+[submodule "resources/public-assets"]
+	path = resources/public-assets
+	url = https://github.com/statelyai/public-assets.git
+[submodule "resources/xstate-python"]
+	path = resources/xstate-python
+	url = https://github.com/statelyai/xstate-python.git
+[submodule "resources/stately-tutorials"]
+	path = resources/stately-tutorials
+	url = https://github.com/statelyai/stately-tutorials.git
+[submodule "resources/schemas"]
+	path = resources/schemas
+	url = https://github.com/statelyai/schemas.git
+[submodule "resources/stately-github-app"]
+	path = resources/stately-github-app
+	url = https://github.com/statelyai/stately-github-app.git
+[submodule "resources/xstate-parser"]
+	path = resources/xstate-parser
+	url = https://github.com/statelyai/xstate-parser.git
+[submodule "resources/xactor"]
+	path = resources/xactor
+	url = https://github.com/statelyai/xactor.git
+[submodule "resources/exercises"]
+	path = resources/exercises
+	url = https://github.com/statelyai/exercises.git
+[submodule "resources/xstate-next-ts-tutorial"]
+	path = resources/xstate-next-ts-tutorial
+	url = https://github.com/statelyai/xstate-next-ts-tutorial.git
