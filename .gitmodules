@@ -64,3 +64,6 @@
 [submodule "resources/xstate-next-ts-tutorial"]
 	path = resources/xstate-next-ts-tutorial
 	url = https://github.com/statelyai/xstate-next-ts-tutorial.git
+[submodule "resources/maui-angular-interop"]
+	path = resources/maui-angular-interop
+	url = https://github.com/alyssamichelle/maui-angular-interop.git
