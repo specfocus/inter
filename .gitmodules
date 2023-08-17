@@ -67,3 +67,6 @@
 [submodule "resources/maui-angular-interop"]
 	path = resources/maui-angular-interop
 	url = https://github.com/alyssamichelle/maui-angular-interop.git
+[submodule "resources/MAUI-JS-Interop"]
+	path = resources/MAUI-JS-Interop
+	url = https://github.com/alyssamichelle/MAUI-JS-Interop.git
