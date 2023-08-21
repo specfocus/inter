@@ -4,12 +4,6 @@
 [submodule "inter-xstate-ts"]
 	path = inter-xstate-ts
 	url = https://github.com/specfocus/inter-xstate-ts.git
-[submodule "inter-state-ts-face-react"]
-	path = inter-state-ts-face-react
-	url = https://github.com/specfocus/inter-state-ts-face-react.git
-[submodule "inter-state-cs-face-uno"]
-	path = inter-state-cs-face-uno
-	url = https://github.com/specfocus/inter-state-cs-face-uno.git
 [submodule "inter-sham-ts"]
 	path = inter-sham-ts
 	url = https://github.com/specfocus/inter-sham-ts.git
