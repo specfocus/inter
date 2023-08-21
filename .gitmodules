@@ -1,9 +1,12 @@
-[submodule "inter-state-cs"]
-	path = inter-state-cs
+[submodule "node/packages/inter-state-ts"]
+	path = node/packages/inter-state-ts
+	url = https://github.com/specfocus/inter-state-ts.git
+[submodule "csharp/inter-state-cs"]
+	path = csharp/inter-state-cs
 	url = https://github.com/specfocus/inter-state-cs.git
-[submodule "inter-sham-ts"]
-	path = inter-sham-ts
-	url = https://github.com/specfocus/inter-sham-ts.git
+[submodule "csharp/inter-state-cs.tests"]
+	path = csharp/inter-state-cs.tests
+	url = https://github.com/specfocus/inter-state-cs.tests.git
 [submodule "resources/RulesEngine"]
 	path = resources/RulesEngine
 	url = https://github.com/microsoft/RulesEngine.git
@@ -58,9 +61,3 @@
 [submodule "resources/MAUI-JS-Interop"]
 	path = resources/MAUI-JS-Interop
 	url = https://github.com/alyssamichelle/MAUI-JS-Interop.git
-[submodule "csharp/inter-state-cs.tests"]
-	path = csharp/inter-state-cs.tests
-	url = https://github.com/specfocus/inter-state-cs.tests.git
-[submodule "csharp/inter-state-cs"]
-	path = csharp/inter-state-cs
-	url = https://github.com/specfocus/inter-state-cs.git
