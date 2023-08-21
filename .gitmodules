@@ -61,3 +61,18 @@
 [submodule "resources/MAUI-JS-Interop"]
 	path = resources/MAUI-JS-Interop
 	url = https://github.com/alyssamichelle/MAUI-JS-Interop.git
+[submodule "node/packages/jest-presets"]
+	path = node/packages/jest-presets
+	url = https://github.com/specfocus/jest-presets.git
+[submodule "node/packages/logger"]
+	path = node/packages/logger
+	url = https://github.com/specfocus/logger.git
+[submodule "node/packages/eslint-config-custom"]
+	path = node/packages/eslint-config-custom
+	url = https://github.com/specfocus/eslint-config-custom.git
+[submodule "node/packages/eslint-config-custom-server"]
+	path = node/packages/eslint-config-custom-server
+	url = https://github.com/specfocus/eslint-config-custom-server.git
+[submodule "node/packages/tsconfig"]
+	path = node/packages/tsconfig
+	url = https://github.com/specfocus/tsconfig.git
