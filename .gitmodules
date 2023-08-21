@@ -1,9 +1,6 @@
 [submodule "inter-state-cs"]
 	path = inter-state-cs
 	url = https://github.com/specfocus/inter-state-cs.git
-[submodule "inter-xstate-ts"]
-	path = inter-xstate-ts
-	url = https://github.com/specfocus/inter-xstate-ts.git
 [submodule "inter-sham-ts"]
 	path = inter-sham-ts
 	url = https://github.com/specfocus/inter-sham-ts.git
