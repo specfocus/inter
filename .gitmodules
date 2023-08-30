@@ -76,6 +76,6 @@
 [submodule "node/packages/tsconfig"]
 	path = node/packages/tsconfig
 	url = https://github.com/specfocus/tsconfig.git
-[submodule "node/play-ddic-next"]
-	path = node/play-ddic-next
+[submodule "node/apps/play-ddic-next"]
+	path = node/apps/play-ddic-next
 	url = https://github.com/specfocus/play-ddic-next.git
