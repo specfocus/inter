@@ -85,3 +85,6 @@
 [submodule "csharp/inter-js-blazor-7-cs"]
 	path = csharp/inter-js-blazor-7-cs
 	url = https://github.com/specfocus/inter-js-blazor-7-cs.git
+[submodule "node/packages/inter-dom-svelte-ts"]
+	path = node/packages/inter-dom-svelte-ts
+	url = https://github.com/specfocus/inter-dom-svelte-ts.git
