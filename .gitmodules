@@ -76,3 +76,12 @@
 [submodule "node/packages/tsconfig"]
 	path = node/packages/tsconfig
 	url = https://github.com/specfocus/tsconfig.git
+[submodule "csharp/inter-dom-forms-4-cs"]
+	path = csharp/inter-dom-forms-4-cs
+	url = https://github.com/specfocus/inter-dom-forms-4-cs.git
+[submodule "csharp/inter-dom-controls-4-cs"]
+	path = csharp/inter-dom-controls-4-cs
+	url = https://github.com/specfocus/inter-dom-controls-4-cs.git
+[submodule "csharp/inter-js-blazor-7-cs"]
+	path = csharp/inter-js-blazor-7-cs
+	url = https://github.com/specfocus/inter-js-blazor-7-cs.git
